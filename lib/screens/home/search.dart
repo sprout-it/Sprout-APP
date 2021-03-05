@@ -8,27 +8,25 @@ class Search extends StatefulWidget {
 class _SearchState extends State<Search> {
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: TextField(
-        textAlign: TextAlign.center,
-        decoration: new InputDecoration(
-          focusedBorder: OutlineInputBorder(
-            borderSide: BorderSide(
-              color: Colors.grey,
-              style: BorderStyle.solid,
-              width: 1.0,
-            ),
+    return TextField(
+      textAlignVertical: TextAlignVertical.bottom,
+      textAlign: TextAlign.center,
+      decoration: new InputDecoration(
+        focusedBorder: OutlineInputBorder(
+          borderSide: BorderSide(
+            color: Colors.grey,
+            style: BorderStyle.solid,
+            width: 1.0,
           ),
-          enabledBorder: OutlineInputBorder(
-            borderSide: BorderSide(
-              color: Colors.grey,
-              style: BorderStyle.solid,
-              width: 1.0,
-            ),
-          ),
-          hintText: 'Search in Sprout',
-      
         ),
+        enabledBorder: OutlineInputBorder(
+          borderSide: BorderSide(
+            color: Colors.grey,
+            style: BorderStyle.solid,
+            width: 1.0,
+          ),
+        ),
+        hintText: 'Search in Sprout',
       ),
     );
   }
