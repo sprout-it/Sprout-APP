@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
 import 'search.dart';
 import 'scanner.dart';
-import 'express.dart';
-import 'food.dart';
-import 'partner.dart';
-import 'win.dart';
+// import 'express.dart';
+// import 'food.dart';
+// import 'partner.dart';
+// import 'win.dart';
 import 'use_wallet.dart';
 import 'wallet_point.dart';
-import 'shop.dart';
-import 'ship.dart';
-import 'service.dart';
-import 'other.dart';
+// import 'shop.dart';
+// import 'ship.dart';
+// import 'service.dart';
+// import 'other.dart';
+import 'menu.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -40,26 +41,7 @@ class _HomeState extends State<Home> {
               ],
             ),
           ),
-          Container(
-            child: Row(
-              children: <Widget>[
-                Food(),
-                Express(),
-                Win(),
-                Partner(),
-              ],
-            ),
-          ),
-          Container(
-            child: Row(
-              children: <Widget>[
-                Ship(),
-                Shop(),
-                Service(),
-                Other(),
-              ],
-            ),
-          ),
+          GridMenu(),
           Container(
             padding: EdgeInsets.fromLTRB(0, 20, 0, 10),
             child: Text("พื้นที่ข่าวสาร"),
