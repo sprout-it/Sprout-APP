@@ -4,6 +4,7 @@ import 'search.dart';
 import 'top_appbar.dart';
 import 'menu.dart';
 import 'advertising.dart';
+import 'branner.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -25,35 +26,7 @@ class _HomeState extends State<Home> {
       ),
       body: ListView(
         children: <Widget>[
-          Container(
-            margin: EdgeInsets.fromLTRB(10, 10, 10, 10),
-            height: 200.0,
-            child: ListView(
-              scrollDirection: Axis.horizontal,
-              children: <Widget>[
-                Container(
-                  width: 160.0,
-                  color: Colors.red,
-                ),
-                Container(
-                  width: 160.0,
-                  color: Colors.blue,
-                ),
-                Container(
-                  width: 160.0,
-                  color: Colors.green,
-                ),
-                Container(
-                  width: 160.0,
-                  color: Colors.yellow,
-                ),
-                Container(
-                  width: 160.0,
-                  color: Colors.orange,
-                ),
-              ],
-            ),
-          ),
+          BrannerSlide(),
           GridMenu(),
           Advertising(),
         ],

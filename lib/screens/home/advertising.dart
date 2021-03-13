@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 class AdvertMenu {
-  String color;
+  String img;
 
-  AdvertMenu(this.color);
+  AdvertMenu(this.img);
 }
 
 class Advertising extends StatefulWidget {
@@ -12,16 +12,11 @@ class Advertising extends StatefulWidget {
 }
 
 class _AdvertisingState extends State<Advertising> {
-
-List<AdvertMenu> menu = [
-    AdvertMenu('red'),
-    AdvertMenu('orange'),
-    AdvertMenu('yellow'),
-    AdvertMenu('green'),
-    AdvertMenu('blue'),
-    AdvertMenu('purple'),
-    AdvertMenu('pink'),
-    AdvertMenu('white'),
+  List<AdvertMenu> menu = [
+    AdvertMenu('assets/images/discount20.png'),
+    AdvertMenu('assets/images/free_shipping.png'),
+    AdvertMenu('assets/images/monitor.jpg'),
+    AdvertMenu('assets/images/checkhand.jpg'),
   ];
 
   @override
@@ -32,18 +27,21 @@ List<AdvertMenu> menu = [
         shrinkWrap: true,
         physics: const NeverScrollableScrollPhysics(),
         itemCount: menu.length,
-        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 2),
+        gridDelegate:
+            SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
         itemBuilder: (BuildContext context, int index) {
-          // AdvertMenu advert = menu[index];
+          AdvertMenu advert = menu[index];
           return InkWell(
             child: Container(
               margin: EdgeInsets.fromLTRB(10, 10, 10, 10),
               height: 30,
-              color: Colors.red,
+              child: Image.asset(
+                advert.img,
+                fit: BoxFit.cover,
+              ),
             ),
             onTap: () {
-              
+              print("advertising");
             },
           );
         },
