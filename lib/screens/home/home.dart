@@ -1,17 +1,9 @@
+import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'search.dart';
-import 'scanner.dart';
-// import 'express.dart';
-// import 'food.dart';
-// import 'partner.dart';
-// import 'win.dart';
-import 'use_wallet.dart';
-import 'wallet_point.dart';
-// import 'shop.dart';
-// import 'ship.dart';
-// import 'service.dart';
-// import 'other.dart';
+import 'top_appbar.dart';
 import 'menu.dart';
+import 'advertising.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -22,30 +14,48 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(85),
+        child: Column(
+          children: <Widget>[
+            TopAppBar(),
+            Search(),
+          ],
+        ),
+      ),
       body: ListView(
         children: <Widget>[
           Container(
-            color: Colors.greenAccent[400],
-            child: Row(
+            margin: EdgeInsets.fromLTRB(10, 10, 10, 10),
+            height: 200.0,
+            child: ListView(
+              scrollDirection: Axis.horizontal,
               children: <Widget>[
-                Scanner(),
-                Search(),
-              ],
-            ),
-          ),
-          Container(
-            child: Row(
-              children: <Widget>[
-                UseWallet(),
-                WalletPoint(),
+                Container(
+                  width: 160.0,
+                  color: Colors.red,
+                ),
+                Container(
+                  width: 160.0,
+                  color: Colors.blue,
+                ),
+                Container(
+                  width: 160.0,
+                  color: Colors.green,
+                ),
+                Container(
+                  width: 160.0,
+                  color: Colors.yellow,
+                ),
+                Container(
+                  width: 160.0,
+                  color: Colors.orange,
+                ),
               ],
             ),
           ),
           GridMenu(),
-          Container(
-            padding: EdgeInsets.fromLTRB(0, 20, 0, 10),
-            child: Text("พื้นที่ข่าวสาร"),
-          ),
+          Advertising(),
         ],
       ),
     );

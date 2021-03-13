@@ -1,4 +1,20 @@
 import 'package:flutter/material.dart';
+import 'shop.dart';
+import 'ship.dart';
+import 'service.dart';
+import 'other.dart';
+import 'express.dart';
+import 'food.dart';
+import 'partner.dart';
+import 'win.dart';
+
+class HomeMenu {
+  String nameMenu;
+  String img;
+  dynamic page;
+
+  HomeMenu(this.nameMenu, this.img,this.page);
+}
 
 class GridMenu extends StatefulWidget {
   @override
@@ -7,14 +23,14 @@ class GridMenu extends StatefulWidget {
 
 class _GridMenuState extends State<GridMenu> {
   List<HomeMenu> menu = [
-    HomeMenu('Food', 'assets/images/food.png'),
-    HomeMenu('Express', 'assets/images/express.png'),
-    HomeMenu('Win', 'assets/images/bike2.png'),
-    HomeMenu('Partner', 'assets/images/partner.png'),
-    HomeMenu('Ship', 'assets/images/ship.png'),
-    HomeMenu('Shop', 'assets/images/shop.png'),
-    HomeMenu('Service', 'assets/images/service.png'),
-    HomeMenu('Other', 'assets/images/other.png'),
+    HomeMenu('Food', 'assets/images/food.png',Food()),
+    HomeMenu('Express', 'assets/images/express.png',Express()),
+    HomeMenu('Win', 'assets/images/bike2.png',Win()),
+    HomeMenu('Partner', 'assets/images/partner.png',Partner()),
+    HomeMenu('Ship', 'assets/images/ship.png',Ship()),
+    HomeMenu('Shop', 'assets/images/shop.png',Shop()),
+    HomeMenu('Service', 'assets/images/service.png',Service()),
+    HomeMenu('Other', 'assets/images/other.png',Other()),
   ];
 
   @override
@@ -44,12 +60,10 @@ class _GridMenuState extends State<GridMenu> {
               ),
             ),
             onTap: () {
-              print(home.nameMenu);
-              
-              // Navigator.push(
-              //   context,
-              //   MaterialPageRoute(builder: (context) => Account()),
-              // );
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => home.page),
+              );
             },
           );
         },
@@ -58,9 +72,4 @@ class _GridMenuState extends State<GridMenu> {
   }
 }
 
-class HomeMenu {
-  String nameMenu;
-  String img;
 
-  HomeMenu(this.nameMenu, this.img);
-}
