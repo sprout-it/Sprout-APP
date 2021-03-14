@@ -9,6 +9,9 @@ class _ExpressState extends State<Express> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text("Express"),
+      ),
       body: Center(
         child: Text("Express"),
       ),

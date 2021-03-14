@@ -1,12 +1,12 @@
 import 'package:carousel_pro/carousel_pro.dart';
 import 'package:flutter/material.dart';
 
-class BrannerSlide extends StatefulWidget {
+class BannerSlide extends StatefulWidget {
   @override
-  _BrannerSlideState createState() => _BrannerSlideState();
+  _BannerSlideState createState() => _BannerSlideState();
 }
 
-class _BrannerSlideState extends State<BrannerSlide> {
+class _BannerSlideState extends State<BannerSlide> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -31,7 +31,7 @@ class _BrannerSlideState extends State<BrannerSlide> {
               print("discount20 branner");
             },
           ),
-           InkWell(
+          InkWell(
             child: Image.asset(
               'assets/images/free_shipping.png',
               fit: BoxFit.contain,
@@ -40,7 +40,7 @@ class _BrannerSlideState extends State<BrannerSlide> {
               print("free_shipping branner");
             },
           ),
-            InkWell(
+          InkWell(
             child: Image.asset(
               'assets/images/monitor.jpg',
               fit: BoxFit.contain,
@@ -49,7 +49,7 @@ class _BrannerSlideState extends State<BrannerSlide> {
               print("monitor branner");
             },
           ),
-           InkWell(
+          InkWell(
             child: Image.asset(
               'assets/images/checkhand.jpg',
               fit: BoxFit.contain,

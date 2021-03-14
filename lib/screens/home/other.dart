@@ -9,6 +9,9 @@ class _OtherState extends State<Other> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text("Other"),
+      ),
       body: Center(
         child: Text("Other"),
       ),

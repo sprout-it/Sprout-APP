@@ -4,7 +4,7 @@ import 'search.dart';
 import 'top_appbar.dart';
 import 'menu.dart';
 import 'advertising.dart';
-import 'branner.dart';
+import 'banner.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -26,7 +26,7 @@ class _HomeState extends State<Home> {
       ),
       body: ListView(
         children: <Widget>[
-          BrannerSlide(),
+          BannerSlide(),
           GridMenu(),
           Advertising(),
         ],

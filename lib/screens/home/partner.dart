@@ -9,6 +9,9 @@ class _PartnerState extends State<Partner> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text("Partner"),
+      ),
       body: Center(
         child: Text("Partner"),
       ),
