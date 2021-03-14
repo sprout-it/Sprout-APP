@@ -1,36 +1,27 @@
 import 'package:flutter/material.dart';
-import 'shop.dart';
-import 'ship.dart';
-import 'service.dart';
-import 'other.dart';
-import 'express.dart';
-import 'food/foodcourt.dart';
-import 'partner.dart';
-import 'win.dart';
 
 class HomeMenu {
   String nameMenu;
   String img;
-  dynamic page;
 
-  HomeMenu(this.nameMenu, this.img, this.page);
+  HomeMenu(this.nameMenu, this.img);
 }
 
-class GridMenu extends StatefulWidget {
+class FoodMenu extends StatefulWidget {
   @override
-  _GridMenuState createState() => _GridMenuState();
+  _FoodMenuState createState() => _FoodMenuState();
 }
 
-class _GridMenuState extends State<GridMenu> {
+class _FoodMenuState extends State<FoodMenu> {
   List<HomeMenu> menu = [
-    HomeMenu('Food', 'assets/images/food.png', FoodCourt()),
-    HomeMenu('Express', 'assets/images/express.png', Express()),
-    HomeMenu('Win', 'assets/images/bike2.png', Win()),
-    HomeMenu('Partner', 'assets/images/partner.png', Partner()),
-    HomeMenu('Ship', 'assets/images/ship.png', Ship()),
-    HomeMenu('Shop', 'assets/images/shop.png', Shop()),
-    HomeMenu('Service', 'assets/images/service.png', Service()),
-    HomeMenu('Other', 'assets/images/other.png', Other()),
+    HomeMenu('โปรโมชั่น', 'assets/images/promotion.png'),
+    HomeMenu('อาหารตามสั่ง', 'assets/images/made.png'),
+    HomeMenu('อาหารทานเล่น', 'assets/images/appetizer.png'),
+    HomeMenu('สตรีทฟู๊ต', 'assets/images/street.png'),
+    HomeMenu('ฟาสต์ฟู๊ด', 'assets/images/fastfood.png'),
+    HomeMenu('อาหารฮาลาล', 'assets/images/halal.png'),
+    HomeMenu('อาหารเส้น', 'assets/images/noodle.png'),
+    HomeMenu('ร้านทั้งหมด', 'assets/images/allfood.png'),
   ];
 
   @override
@@ -59,12 +50,12 @@ class _GridMenuState extends State<GridMenu> {
                 ],
               ),
             ),
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => home.page),
-              );
-            },
+            // onTap: () {
+            //   Navigator.push(
+            //     context,
+            //     MaterialPageRoute(builder: (context) => home.page),
+            //   );
+            // },
           );
         },
       ),

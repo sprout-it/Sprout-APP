@@ -1,17 +1,17 @@
 import 'package:carousel_pro/carousel_pro.dart';
 import 'package:flutter/material.dart';
 
-class BannerSlide extends StatefulWidget {
+class FoodBrannerSlide extends StatefulWidget {
   @override
-  _BannerSlideState createState() => _BannerSlideState();
+  _FoodBrannerSlideState createState() => _FoodBrannerSlideState();
 }
 
-class _BannerSlideState extends State<BannerSlide> {
+class _FoodBrannerSlideState extends State<FoodBrannerSlide> {
   @override
   Widget build(BuildContext context) {
     return Container(
       height: 180,
-      margin: EdgeInsets.fromLTRB(10, 0, 10, 0),
+      margin: EdgeInsets.fromLTRB(10, 10, 10, 0),
       width: double.infinity,
       child: Carousel(
         dotSize: 4.0,
