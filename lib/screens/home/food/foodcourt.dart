@@ -15,7 +15,15 @@ class _FoodCourtState extends State<FoodCourt> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("ที่อยู่ปัจจุบัน"),
+        title: InkWell(
+          child: Text("ที่อยู่ปัจจุบัน"),
+          onTap: () {
+            // Navigator.push(
+            //   context,
+            //   MaterialPageRoute(builder: (context) => Map),
+            // );
+          },
+        ),
       ),
       body: ListView(
         children: [
