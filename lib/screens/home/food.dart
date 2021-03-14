@@ -9,6 +9,9 @@ class _FoodState extends State<Food> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text("Food"),
+      ),
       body: Center(
         child: Text("Food"),
       ),

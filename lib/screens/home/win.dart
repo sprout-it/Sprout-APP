@@ -9,6 +9,9 @@ class _WinState extends State<Win> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text("Win"),
+      ),
       body: Center(
         child: Text("Win"),
       ),

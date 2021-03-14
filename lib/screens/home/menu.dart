@@ -13,7 +13,7 @@ class HomeMenu {
   String img;
   dynamic page;
 
-  HomeMenu(this.nameMenu, this.img,this.page);
+  HomeMenu(this.nameMenu, this.img, this.page);
 }
 
 class GridMenu extends StatefulWidget {
@@ -23,14 +23,14 @@ class GridMenu extends StatefulWidget {
 
 class _GridMenuState extends State<GridMenu> {
   List<HomeMenu> menu = [
-    HomeMenu('Food', 'assets/images/food.png',Food()),
-    HomeMenu('Express', 'assets/images/express.png',Express()),
-    HomeMenu('Win', 'assets/images/bike2.png',Win()),
-    HomeMenu('Partner', 'assets/images/partner.png',Partner()),
-    HomeMenu('Ship', 'assets/images/ship.png',Ship()),
-    HomeMenu('Shop', 'assets/images/shop.png',Shop()),
-    HomeMenu('Service', 'assets/images/service.png',Service()),
-    HomeMenu('Other', 'assets/images/other.png',Other()),
+    HomeMenu('Food', 'assets/images/food.png', Food()),
+    HomeMenu('Express', 'assets/images/express.png', Express()),
+    HomeMenu('Win', 'assets/images/bike2.png', Win()),
+    HomeMenu('Partner', 'assets/images/partner.png', Partner()),
+    HomeMenu('Ship', 'assets/images/ship.png', Ship()),
+    HomeMenu('Shop', 'assets/images/shop.png', Shop()),
+    HomeMenu('Service', 'assets/images/service.png', Service()),
+    HomeMenu('Other', 'assets/images/other.png', Other()),
   ];
 
   @override
@@ -41,8 +41,8 @@ class _GridMenuState extends State<GridMenu> {
         shrinkWrap: true,
         physics: const NeverScrollableScrollPhysics(),
         itemCount: menu.length,
-        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 4),
+        gridDelegate:
+            SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 4),
         itemBuilder: (BuildContext context, int index) {
           HomeMenu home = menu[index];
           return InkWell(
@@ -71,5 +71,3 @@ class _GridMenuState extends State<GridMenu> {
     );
   }
 }
-
-
