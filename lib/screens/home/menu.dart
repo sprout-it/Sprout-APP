@@ -12,7 +12,6 @@ class HomeMenu {
   String nameMenu;
   String img;
   dynamic page;
-
   HomeMenu(this.nameMenu, this.img, this.page);
 }
 

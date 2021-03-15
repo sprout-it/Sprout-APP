@@ -1,5 +1,6 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'search.dart';
 import 'top_appbar.dart';
 import 'menu.dart';
@@ -24,13 +25,11 @@ class _HomeState extends State<Home> {
           ],
         ),
       ),
-      body: ListView(
-        children: <Widget>[
-          BrannerSlide(),
-          GridMenu(),
-          Advertising(),
-        ],
-      ),
+      body: ListView(children: <Widget>[
+        BrannerSlide(),
+        GridMenu(),
+        Advertising(),
+      ]),
     );
   }
 }

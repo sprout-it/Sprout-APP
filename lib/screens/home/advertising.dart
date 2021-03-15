@@ -33,7 +33,7 @@ class _AdvertisingState extends State<Advertising> {
           AdvertMenu advert = menu[index];
           return InkWell(
             child: Container(
-              margin: EdgeInsets.fromLTRB(10, 10, 10, 10),
+              margin: EdgeInsets.fromLTRB(5, 5, 5, 5),
               height: 30,
               child: Image.asset(
                 advert.img,
