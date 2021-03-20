@@ -4,6 +4,7 @@ import 'foodsearch.dart';
 import 'foodbranner.dart';
 import 'foodmenu.dart';
 import 'newstore.dart';
+import 'restaurants.dart';
 import 'googleMapsSelect.dart';
 import 'package:sprout/screens/home/food/googleMapsSelect.dart';
 import 'package:google_maps_place_picker/google_maps_place_picker.dart';
@@ -45,6 +46,7 @@ class _FoodCourtState extends State<FoodCourt> {
           FoodBrannerSlide(),
           FoodMenu(),
           NewStore(),
+          Restaurants()
         ],
       ),
     );

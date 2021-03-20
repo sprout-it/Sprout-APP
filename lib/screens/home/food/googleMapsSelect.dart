@@ -62,7 +62,7 @@ class _HomePageState extends State<HomePage> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
-              RaisedButton(
+              TextButton(
                 child: Text("Load Google Map"),
                 onPressed: () {
                   Navigator.push(
