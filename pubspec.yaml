@@ -29,7 +29,9 @@ dependencies:
   flutter_launcher_icons: ^0.9.0
   carousel_pro: ^1.0.0
   http: ^0.12.0+4
-  # firebase_core: ^0.5.3
+  firebase_core: "^0.7.0"
+  firebase_messaging: "^8.0.0-dev.15"
+  flutter_local_notifications:
   # firebase_auth: ^0.18.4+1
   android_intent: ^2.0.0
   provider: ^4.0.1

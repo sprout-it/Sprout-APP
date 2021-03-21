@@ -1,41 +1,33 @@
 {
   "project_info": {
-    "project_number": "407025323382",
-    "project_id": "sprout-app-dfbf0",
-    "storage_bucket": "sprout-app-dfbf0.appspot.com"
+    "project_number": "109991356932",
+    "project_id": "sprout-app-925ce",
+    "storage_bucket": "sprout-app-925ce.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:407025323382:android:54a2027daf7a8781053e57",
+        "mobilesdk_app_id": "1:109991356932:android:7fae9211fed4609b1ea351",
         "android_client_info": {
           "package_name": "com.example.sprout"
         }
       },
       "oauth_client": [
         {
-          "client_id": "407025323382-n5mpr34tqh7tb30o87junpbg1itqsjpk.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.example.sprout",
-            "certificate_hash": "c8f57c8ac40d0279d9116504910cdfde81181801"
-          }
-        },
-        {
-          "client_id": "407025323382-ko4kvr73jl5lvgc6keifqj2meji5bjad.apps.googleusercontent.com",
+          "client_id": "109991356932-n8q5de25dnb8cg7le4gont14sagnuger.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBbrGu4F_gP88YTr65ZkFdZkhOIA0-rT9I"
+          "current_key": "AIzaSyCniw1ZXRYb-CNZEBI2bHyLnY8TuXqCM1s"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "407025323382-ko4kvr73jl5lvgc6keifqj2meji5bjad.apps.googleusercontent.com",
+              "client_id": "109991356932-n8q5de25dnb8cg7le4gont14sagnuger.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
