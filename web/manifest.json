@@ -1,6 +1,6 @@
 {
-    "name": "sproutapp",
-    "short_name": "sproutapp",
+    "name": "sprout",
+    "short_name": "sprout",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
