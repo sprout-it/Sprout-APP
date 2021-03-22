@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:sprout/screens/home/food/newstore.dart';
+// import 'package:sprout/screens/home/food/newstore.dart';
 import 'foodsearch.dart';
 import 'foodbranner.dart';
 import 'foodmenu.dart';
-import 'newstore.dart';
+// import 'newstore.dart';
 import 'restaurants.dart';
 import 'googleMapsSelect.dart';
 import 'package:sprout/screens/home/food/googleMapsSelect.dart';
@@ -45,7 +45,6 @@ class _FoodCourtState extends State<FoodCourt> {
           FoodSearch(),
           FoodBrannerSlide(),
           FoodMenu(),
-          NewStore(),
           Restaurants()
         ],
       ),
