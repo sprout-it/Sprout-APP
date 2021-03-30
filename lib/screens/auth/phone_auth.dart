@@ -25,7 +25,8 @@ class _PhoneLoginState extends State<PhoneLogin> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: MediaQuery.of(context).size.width * 0.4,
+      width: MediaQuery.of(context).size.width,
+      margin: const EdgeInsets.only(left: 30.0, right: 30.0),
       padding: EdgeInsets.only(left: 8.0, top: 30),
       alignment: Alignment.center,
       child: new RaisedButton(
@@ -36,7 +37,6 @@ class _PhoneLoginState extends State<PhoneLogin> {
         onPressed: () => {},
         child: new Container(
           child: new Row(
-            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               new Expanded(
                 child: new FlatButton(
@@ -51,11 +51,7 @@ class _PhoneLoginState extends State<PhoneLogin> {
                           return StatefulBuilder(builder:
                               (BuildContext context, StateSetter state) {
                             return Container(
-                              padding: EdgeInsets.all(16),
-                              height: MediaQuery.of(context).size.height * 0.7,
                               child: new Column(
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                crossAxisAlignment: CrossAxisAlignment.start,
                                 children: <Widget>[
                                   Text(
                                     'LOGIN',
@@ -85,7 +81,7 @@ class _PhoneLoginState extends State<PhoneLogin> {
                                         prefix: Container(
                                           padding: EdgeInsets.all(4.0),
                                           child: Text(
-                                            "+91",
+                                            "+66",
                                             style: TextStyle(
                                                 color: Colors.black,
                                                 fontWeight: FontWeight.bold),
@@ -154,20 +150,11 @@ class _PhoneLoginState extends State<PhoneLogin> {
                           });
                         });
                   },
-                  padding: EdgeInsets.only(
-                    top: 20.0,
-                    bottom: 20.0,
-                  ),
-                  child: new Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: <Widget>[
-                      Text(
-                        "Phone",
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                            color: Colors.white, fontWeight: FontWeight.bold),
-                      ),
-                    ],
+                  child: Text(
+                    "Phone",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                        color: Colors.white, fontWeight: FontWeight.bold),
                   ),
                 ),
               ),

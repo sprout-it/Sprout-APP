@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'screens/auth/auth.dart';
+import 'screens/auth/login.dart';
 import 'screens/home/home.dart';
 import 'screens/ordered/ordered.dart';
 import 'screens/payment/payment.dart';
@@ -101,7 +101,7 @@ class _RoutePageState extends State<RoutePage> {
             ),
           )
         : Scaffold(
-            body: AuthScreen(),
+            body: LoginPage(),
           );
   }
 }
