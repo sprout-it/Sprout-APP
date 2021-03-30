@@ -24,11 +24,7 @@ class _RestaurantsState extends State<Restaurants> {
         setState(() {
           _restaurantsAPI = convertRestaurantsFromJson(response.body);
         });
-      } else {
-        setState(() {
-          _restaurantsAPI = [];
-        });
-      }
+      } 
     } catch (e) {
       print(e);
     }
@@ -36,81 +32,40 @@ class _RestaurantsState extends State<Restaurants> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: <Widget>[
-        Row(
-          children: <Widget>[
-            Image.network('https://firebasestorage.googleapis.com/v0/b/sprout-app-925ce.appspot.com/o/restaurants%2F%E0%B8%84%E0%B8%A3%E0%B8%B1%E0%B8%A7%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%AA%E0%B8%A7%E0%B8%99%2F%E0%B8%84%E0%B8%A3%E0%B8%B1%E0%B8%A7%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%AA%E0%B8%A7%E0%B8%99.jpg?alt=media&token=1e994cb7-32da-44e4-8319-6e4fc4be853b'),
-            Text(_restaurantsAPI[0]?.name),
-          ],
-        ),
-        Row(
-          children: <Widget>[
-            Image.network('https://firebasestorage.googleapis.com/v0/b/sprout-app-925ce.appspot.com/o/restaurants%2FLAEMCHAROEN%20SEAFOOD%2FLAEMCHAROEN%20SEAFOOD.jpg?alt=media&token=a8e381cf-5f29-482e-bedc-7840fcd7f49e'),
-            Text(_restaurantsAPI[1]?.name),
-          ],
-        ),
-        Row(
-          children: <Widget>[
-            Image.network('https://firebasestorage.googleapis.com/v0/b/sprout-app-925ce.appspot.com/o/restaurants%2Fseenbangkok%2Fseenbangkok.jpg?alt=media&token=31b2e7c0-c6b8-48c5-9d0d-0b08dba7e90d'),
-            Text(_restaurantsAPI[3]?.name),
-          ],
-        ),
-        Row(
-          children: <Widget>[
-            Image.network('https://firebasestorage.googleapis.com/v0/b/sprout-app-925ce.appspot.com/o/restaurants%2FShinsen%20Fish%20Market%2FShinsen%20Fish%20Market.jpg?alt=media&token=98fda763-60db-4764-a314-621dfb8802fc'),
-            Text(_restaurantsAPI[4]?.name),
-          ],
-        ),
-        Row(
-          children: <Widget>[
-            Image.network('https://firebasestorage.googleapis.com/v0/b/sprout-app-925ce.appspot.com/o/restaurants%2FBowcake%2FBowcake.jpg?alt=media&token=f9f9e952-ac7d-4ad2-bad9-38fd91398ff4'),
-            Text(_restaurantsAPI[5]?.name),
-          ],
-        ),
-        Row(
-          children: <Widget>[
-            Image.network('https://firebasestorage.googleapis.com/v0/b/sprout-app-925ce.appspot.com/o/restaurants%2Fkenshinizakaya%2Fkenshinizakaya.jpg?alt=media&token=422a09d5-e69b-4adf-ba3a-98bb337e3af0'),
-            Text(_restaurantsAPI[6]?.name),
-          ],
-        ),
-        Row(
-          children: <Widget>[
-            Image.network('https://firebasestorage.googleapis.com/v0/b/sprout-app-925ce.appspot.com/o/restaurants%2FK%20House%2FK%20House.jpg?alt=media&token=48d345a8-1489-4e59-837c-e0afef3db1f1'),
-            Text(_restaurantsAPI[7]?.name),
-          ],
-        ),
-        Row(
-          children: <Widget>[
-            Image.network('https://firebasestorage.googleapis.com/v0/b/sprout-app-925ce.appspot.com/o/restaurants%2FSushi%20Hana%2FSushi%20Hana.jpg?alt=media&token=ae14f7a1-1035-4482-841e-44de2b986c9c'),
-            Text(_restaurantsAPI[8]?.name),
-          ],
-        ),
-        Row(
-          children: <Widget>[
-            Image.network('https://firebasestorage.googleapis.com/v0/b/sprout-app-925ce.appspot.com/o/restaurants%2FBUTCHER%20beef%26beer%2FBUTCHER%20beef%26beer.jpg?alt=media&token=0e5d6eaf-84c1-4ca2-9296-d3c0ef812d24'),
-            Text(_restaurantsAPI[9]?.name),
-          ],
-        ),
-        Row(
-          children: <Widget>[
-            Image.network('https://firebasestorage.googleapis.com/v0/b/sprout-app-925ce.appspot.com/o/restaurants%2FDak%20Galbi%2FDak%20Galbi.jpg?alt=media&token=427455de-b5ed-4f94-b6c7-3a00d55ef533'),
-            Text(_restaurantsAPI[10]?.name),
-          ],
-        ),
-        Row(
-          children: <Widget>[
-            Image.network('https://firebasestorage.googleapis.com/v0/b/sprout-app-925ce.appspot.com/o/restaurants%2FKatsukura%20Thailand%2FKatsukura%20Thailand.jpg?alt=media&token=fffc3806-c2e7-4e92-a541-790751fb5be1'),
-            Text(_restaurantsAPI[11]?.name),
-          ],
-        ),
-        Row(
-          children: <Widget>[
-            Image.network('https://firebasestorage.googleapis.com/v0/b/sprout-app-925ce.appspot.com/o/restaurants%2F%E0%B8%84%E0%B8%A3%E0%B8%B1%E0%B8%A7%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%AA%E0%B8%A7%E0%B8%99%2F%E0%B8%84%E0%B8%A3%E0%B8%B1%E0%B8%A7%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%AA%E0%B8%A7%E0%B8%99.jpg?alt=media&token=1e994cb7-32da-44e4-8319-6e4fc4be853b'),
-            Text(_restaurantsAPI[12]?.name),
-          ],
-        ),
-      ],
+    return Padding(
+      padding: EdgeInsets.all(0),
+      child: GridView.builder(
+        shrinkWrap: true,
+        physics: const NeverScrollableScrollPhysics(),
+        itemCount: _restaurantsAPI.length,
+        gridDelegate:
+            SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 1),
+        itemBuilder: (BuildContext context, int index) {
+          final res = _restaurantsAPI[index];
+          return InkWell(
+            child: Container(
+              padding: EdgeInsets.fromLTRB(0, 17, 0, 10),
+              child: Column(
+                children: <Widget>[
+                  Image.network(
+                    res?.imgUrl,
+                  //   fit: BoxFit.cover,
+                  //   height: 40,
+                  ),
+                  Text(res?.imgUrl.toString()),
+                  Text(res?.name)
+                ],
+              ),
+            ),
+            // onTap: () {
+            //   Navigator.push(
+            //     context,
+            //     MaterialPageRoute(builder: (context) => home.page),
+            //   );
+            // },
+          );
+        },
+      ),
     );
   }
 }
