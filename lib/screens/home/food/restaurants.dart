@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 class Restaurants extends StatefulWidget {
   @override
@@ -17,14 +18,15 @@ class _RestaurantsState extends State<Restaurants> {
   }
 
   Future<void> getRestaurants() async {
-    var url = "http://localhost/restaurants";
+    var url = "${env['ENDPOINT_API']}/restaurants";
     try {
       var response = await http.get(url);
+      print(response);
       if (response.statusCode == 200) {
         setState(() {
           _restaurantsAPI = convertRestaurantsFromJson(response.body);
         });
-      } 
+      }
     } catch (e) {
       print(e);
     }
@@ -33,36 +35,35 @@ class _RestaurantsState extends State<Restaurants> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.all(0),
+      padding: EdgeInsets.all(8),
       child: GridView.builder(
         shrinkWrap: true,
         physics: const NeverScrollableScrollPhysics(),
-        itemCount: _restaurantsAPI.length,
+        itemCount: _restaurantsAPI.length == null ? 0 : _restaurantsAPI.length,
         gridDelegate:
-            SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 1),
+            SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
         itemBuilder: (BuildContext context, int index) {
           final res = _restaurantsAPI[index];
-          return InkWell(
-            child: Container(
-              padding: EdgeInsets.fromLTRB(0, 17, 0, 10),
-              child: Column(
-                children: <Widget>[
-                  Image.network(
-                    res?.imgUrl,
-                  //   fit: BoxFit.cover,
-                  //   height: 40,
-                  ),
-                  Text(res?.imgUrl.toString()),
-                  Text(res?.name)
-                ],
-              ),
-            ),
-            // onTap: () {
-            //   Navigator.push(
-            //     context,
-            //     MaterialPageRoute(builder: (context) => home.page),
-            //   );
-            // },
+          return Column(
+            children: <Widget>[
+              Card(
+                child: InkWell(
+                    splashColor: Colors.blue.withAlpha(30),
+                    child: Column(
+                      children: [
+                        ClipRRect(
+                          borderRadius: BorderRadius.circular(8.0),
+                          child: Image.network(
+                            res.imgUrl,
+                            width: 120,
+                            height: 120,
+                          ),
+                        ),
+                        Text(res.name)
+                      ],
+                    )),
+              )
+            ],
           );
         },
       ),

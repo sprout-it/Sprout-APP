@@ -42,7 +42,7 @@ class MapPicker extends StatelessWidget {
 class HomePage extends StatefulWidget {
   const HomePage({Key key}) : super(key: key);
 
-  static final kInitialPosition = LatLng(-33.8567844, 151.213108);
+  static final kInitialPosition = LatLng(13.756331, 100.501762);
 
   @override
   _HomePageState createState() => _HomePageState();
@@ -74,18 +74,17 @@ class _HomePageState extends State<HomePage> {
                           initialPosition: HomePage.kInitialPosition,
                           useCurrentLocation: true,
                           selectInitialPosition: true,
-
-                          //usePlaceDetailSearch: true,
+                          usePlaceDetailSearch: true,
                           onPlacePicked: (result) {
                             selectedPlace = result;
                             Navigator.of(context).pop();
                             setState(() {});
                           },
-                          //forceSearchOnZoomChanged: true,
-                          //automaticallyImplyAppBarLeading: false,
-                          //autocompleteLanguage: "ko",
-                          //region: 'au',
-                          //selectInitialPosition: true,
+                          // forceSearchOnZoomChanged: true,
+                          // automaticallyImplyAppBarLeading: false,
+                          // autocompleteLanguage: "ko",
+                          // region: 'au',
+                          // selectInitialPosition: true,
                           // selectedPlaceWidgetBuilder: (_, selectedPlace, state, isSearchBarFocused) {
                           //   print("state: $state, isSearchBarFocused: $isSearchBarFocused");
                           //   return isSearchBarFocused
