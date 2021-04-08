@@ -6,7 +6,6 @@ import 'screens/payment/payment.dart';
 import 'screens/message/message.dart';
 import 'screens/account/account.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'main.dart';
 
 /// This is the stateful widget that the main application instantiates.
 
@@ -55,18 +54,18 @@ class _RoutePageState extends State<RoutePage> {
   Widget build(BuildContext context) {
     return user != null
         ? Scaffold(
-            appBar: AppBar(
-              title: Text('Home Screen'),
-              actions: [
-                IconButton(
-                    icon: Icon(Icons.logout),
-                    onPressed: () {
-                      _firebaseAuth.signOut();
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => Main()));
-                    })
-              ],
-            ),
+            // appBar: AppBar(
+            //   title: Text('Home Screen'),
+            //   actions: [
+            //     IconButton(
+            //         icon: Icon(Icons.logout),
+            //         onPressed: () {
+            //           _firebaseAuth.signOut();
+            //           Navigator.push(context,
+            //               MaterialPageRoute(builder: (context) => Main()));
+            //         })
+            //   ],
+            // ),
             body: SafeArea(
               child: _widgetOptions.elementAt(_selectedIndex),
             ),

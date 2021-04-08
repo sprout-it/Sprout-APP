@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'SelectedRestaurant.dart';
 
 class Restaurants extends StatefulWidget {
   @override
@@ -21,7 +22,7 @@ class _RestaurantsState extends State<Restaurants> {
     var url = "${env['ENDPOINT_API']}/restaurants";
     try {
       var response = await http.get(url);
-      print(response);
+      print(response.body);
       if (response.statusCode == 200) {
         setState(() {
           _restaurantsAPI = convertRestaurantsFromJson(response.body);
@@ -36,37 +37,43 @@ class _RestaurantsState extends State<Restaurants> {
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.all(8),
-      child: GridView.builder(
-        shrinkWrap: true,
-        physics: const NeverScrollableScrollPhysics(),
-        itemCount: _restaurantsAPI.length == null ? 0 : _restaurantsAPI.length,
-        gridDelegate:
-            SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
-        itemBuilder: (BuildContext context, int index) {
-          final res = _restaurantsAPI[index];
-          return Column(
-            children: <Widget>[
-              Card(
-                child: InkWell(
-                    splashColor: Colors.blue.withAlpha(30),
-                    child: Column(
-                      children: [
-                        ClipRRect(
-                          borderRadius: BorderRadius.circular(8.0),
-                          child: Image.network(
-                            res.imgUrl,
-                            width: 120,
-                            height: 120,
-                          ),
-                        ),
-                        Text(res.name)
-                      ],
-                    )),
-              )
-            ],
-          );
-        },
-      ),
+      child: _restaurantsAPI == null
+          ? Text('loading')
+          : GridView.builder(
+              shrinkWrap: true,
+              physics: const NeverScrollableScrollPhysics(),
+              itemCount: _restaurantsAPI.length,
+              gridDelegate:
+                  SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+              itemBuilder: (BuildContext context, int index) {
+                final res = _restaurantsAPI[index];
+                return Column(
+                  children: <Widget>[
+                    Card(
+                      child: InkWell(
+                          onTap: () => Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => SelectedRestaurant())),
+                          splashColor: Colors.blue.withAlpha(30),
+                          child: Column(
+                            children: [
+                              ClipRRect(
+                                borderRadius: BorderRadius.circular(8.0),
+                                child: Image.network(
+                                  res.imgUrl,
+                                  width: 120,
+                                  height: 120,
+                                ),
+                              ),
+                              Text(res.name)
+                            ],
+                          )),
+                    )
+                  ],
+                );
+              },
+            ),
     );
   }
 }
